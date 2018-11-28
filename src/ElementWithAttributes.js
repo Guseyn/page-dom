@@ -2,23 +2,19 @@
 
 const { AsyncObject } = require('@page-libs/cutie');
 
-class CreatedElement extends AsyncObject {
+class ElementWithAttributes extends AsyncObject {
 
-  constructor(tagName, attrStr, text) {
-    super(tagName, attrStr, text);
+  constructor(elm, attrStr) {
+    super(elm, attrStr);
   }
 
   definedSyncCall() {
-    return (tagName, attrStr, text) => {
-      let elm = document.createElement(tagName);
+    return (elm, attrStr) => {
       attrStr.split(' ').forEach(attrPair => {
         let nameAndValue = attrPair.split('=');
         let name = nameAndValue[0].trim();
         let value = nameAndValue[1].trim();
         elm.setAttribute(name, value);
-        if (text) {
-          elm.appendChild(document.createTextNode(text));
-        }
       });
       return elm;
     }
@@ -26,4 +22,4 @@ class CreatedElement extends AsyncObject {
 
 }
 
-module.exports = CreatedElement;
+module.exports = ElementWithAttributes;
