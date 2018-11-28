@@ -36,7 +36,7 @@ function (_AsyncObject) {
     key: "definedSyncCall",
     value: function definedSyncCall() {
       return function (tagName, attrStr, text) {
-        var elm = document.createElement();
+        var elm = document.createElement(tagName);
         attrStr.split(' ').forEach(function (attrPair) {
           var nameAndValue = attrPair.split('=');
           var name = nameAndValue[0].trim();
