@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "grunt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test-executor"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,9 @@
     "load-grunt-tasks": "^4.0.0"
   },
   "dependencies": {
-    "@page-libs/cutie": "^1.0.1"
+    "@cuties/assert": "^1.1.5",
+    "@cuties/cutie": "^1.4.4",
+    "@page-libs/cutie": "^1.0.1",
+    "test-executor": "^1.1.2"
   }
 }

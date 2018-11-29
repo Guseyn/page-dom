@@ -21,44 +21,28 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var _require = require('@page-libs/cutie'),
     AsyncObject = _require.AsyncObject;
 
-var CreatedElement =
+var ElementWithTextContent =
 /*#__PURE__*/
 function (_AsyncObject) {
-  _inherits(CreatedElement, _AsyncObject);
+  _inherits(ElementWithTextContent, _AsyncObject);
 
-  function CreatedElement(tagName, attrStr, text) {
-    _classCallCheck(this, CreatedElement);
+  function ElementWithTextContent(elm, html) {
+    _classCallCheck(this, ElementWithTextContent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CreatedElement).call(this, tagName, attrStr, text));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ElementWithTextContent).call(this, elm, html));
   }
 
-  _createClass(CreatedElement, [{
+  _createClass(ElementWithTextContent, [{
     key: "definedSyncCall",
     value: function definedSyncCall() {
-      return function (tagName, attrStr, text) {
-        var elm = document.createElement(tagName);
-
-        if (attrStr) {
-          attrStr.trim().split(' ').filter(function (str) {
-            return str.trim().length !== 0;
-          }).forEach(function (attrPair) {
-            var nameAndValue = attrPair.split('=');
-            var name = nameAndValue[0].trim();
-            var value = nameAndValue[1].replace(/['"]+/g, '').trim();
-            elm.setAttribute(name, value);
-          });
-        }
-
-        if (text) {
-          elm.appendChild(document.createTextNode(text));
-        }
-
+      return function (elm, html) {
+        elm.textContent = html;
         return elm;
       };
     }
   }]);
 
-  return CreatedElement;
+  return ElementWithTextContent;
 }(AsyncObject);
 
-module.exports = CreatedElement;
+module.exports = ElementWithTextContent;
