@@ -1,6 +1,8 @@
 'use strict'
 
 const { AsyncObject } = require('@cuties/cutie');
+const PageAsyncObject = require('@page-libs/cutie').AsyncObject;
+const index = require('./src/index');
 
 global.document = {
   createElement: (tagName) => {
@@ -60,6 +62,17 @@ class ObjWithNoFuncs extends AsyncObject {
     }
   }
 
+}
+
+for (let key in index) {
+  let indexValuePrototype = Object.getPrototypeOf(index[key]);
+  console.log(index[key].prototype.isPrototypeOf());
+  if (indexValuePrototype) {
+    if (indexValuePrototype.isPrototypeOf(PageAsyncObject)) {
+      //Object.setPrototypeOf(index[key].prototype, AsyncObject.prototype);
+      //Object.setPrototypeOf(index[key], AsyncObject);
+    }
+  }
 }
 
 module.exports = {

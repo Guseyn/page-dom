@@ -4,10 +4,6 @@ const { ObjWithNoFuncs } = require('./../mock');
 const { AsyncObject } = require('@cuties/cutie');
 const { DeepEqualAssertion } = require('@cuties/assert');
 const { CreatedElement, ElementWithAttributes } = require('./../src/index');
-Object.setPrototypeOf(CreatedElement.prototype, AsyncObject.prototype);
-Object.setPrototypeOf(CreatedElement, AsyncObject);
-Object.setPrototypeOf(ElementWithAttributes.prototype, AsyncObject.prototype);
-Object.setPrototypeOf(ElementWithAttributes, AsyncObject);
 
 new DeepEqualAssertion(
   new ObjWithNoFuncs(
