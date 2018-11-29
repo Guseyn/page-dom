@@ -21,44 +21,33 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var _require = require('@page-libs/cutie'),
     AsyncObject = _require.AsyncObject;
 
-var CreatedElement =
+var ElementWithAttributes =
 /*#__PURE__*/
 function (_AsyncObject) {
-  _inherits(CreatedElement, _AsyncObject);
+  _inherits(ElementWithAttributes, _AsyncObject);
 
-  function CreatedElement(tagName, attrStr, text) {
-    _classCallCheck(this, CreatedElement);
+  function ElementWithAttributes(elm, attrStr) {
+    _classCallCheck(this, ElementWithAttributes);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CreatedElement).call(this, tagName, attrStr, text));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ElementWithAttributes).call(this, elm, attrStr));
   }
 
-  _createClass(CreatedElement, [{
+  _createClass(ElementWithAttributes, [{
     key: "definedSyncCall",
     value: function definedSyncCall() {
-      return function (tagName, attrStr, text) {
-        var elm = document.createElement(tagName);
-
-        if (attrStr) {
-          attrStr.trim().split(' ').filter(function (str) {
-            return str.trim().length !== 0;
-          }).forEach(function (attrPair) {
-            var nameAndValue = attrPair.split('=');
-            var name = nameAndValue[0].trim();
-            var value = nameAndValue[1].replace(/['"]+/g, '').trim();
-            elm.setAttribute(name, value);
-          });
-        }
-
-        if (text) {
-          elm.appendChild(document.createTextNode(text));
-        }
-
+      return function (elm, attrStr) {
+        attrStr.split(' ').forEach(function (attrPair) {
+          var nameAndValue = attrPair.split('=');
+          var name = nameAndValue[0].trim();
+          var value = nameAndValue[1].replace(/['"]+/g, '').trim();
+          elm.setAttribute(name, value);
+        });
         return elm;
       };
     }
   }]);
 
-  return CreatedElement;
+  return ElementWithAttributes;
 }(AsyncObject);
 
-module.exports = CreatedElement;
+module.exports = ElementWithAttributes;
