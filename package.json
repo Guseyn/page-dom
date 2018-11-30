@@ -31,7 +31,7 @@
   "dependencies": {
     "@cuties/assert": "^1.1.5",
     "@cuties/cutie": "^1.4.4",
-    "@page-libs/cutie": "^1.0.1",
+    "@page-libs/cutie": "^1.0.2",
     "test-executor": "^1.1.2"
   }
 }
