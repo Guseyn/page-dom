@@ -1,5 +1,7 @@
 # page-dom
-Set of async objects for creating DOM elements in [Page](https://github.com/Guseyn/page) framework. 
+Set of async objects for creating DOM elements in [Page](https://github.com/Guseyn/page) framework.  It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
+
+[![NPM Version][npm-image]][npm-url]
 
 ## install
 
@@ -112,3 +114,5 @@ new ElementWithAppendedChildren(
 
 ```
 
+[npm-image]: https://img.shields.io/npm/v/@page-libs/dom.svg
+[npm-url]: https://npmjs.org/package/@page-libs/dom
