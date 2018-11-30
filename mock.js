@@ -4,6 +4,8 @@ const { AsyncObject } = require('@cuties/cutie');
 const PageAsyncObject = require('@page-libs/cutie').AsyncObject;
 const index = require('./src/index');
 
+// mock global document
+
 global.document = {
   createElement: (tagName) => {
     let elm = {
@@ -39,6 +41,8 @@ global.document = {
   }
 }
 
+// async object that gets only data from object
+
 class ObjWithNoFuncs extends AsyncObject {
 
   constructor(elm) {
@@ -64,14 +68,12 @@ class ObjWithNoFuncs extends AsyncObject {
 
 }
 
+// transform all async objects from @page-libs/cutie to @cuties/cutie for testing
+
 for (let key in index) {
-  let indexValuePrototype = Object.getPrototypeOf(index[key]);
-  console.log(index[key].prototype.isPrototypeOf());
-  if (indexValuePrototype) {
-    if (indexValuePrototype.isPrototypeOf(PageAsyncObject)) {
-      //Object.setPrototypeOf(index[key].prototype, AsyncObject.prototype);
-      //Object.setPrototypeOf(index[key], AsyncObject);
-    }
+  if (index[key].prototype instanceof PageAsyncObject) {
+    Object.setPrototypeOf(index[key].prototype, AsyncObject.prototype);
+    Object.setPrototypeOf(index[key], AsyncObject);
   }
 }
 
