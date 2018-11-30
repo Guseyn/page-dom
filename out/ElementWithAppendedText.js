@@ -21,18 +21,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var _require = require('@page-libs/cutie'),
     AsyncObject = _require.AsyncObject;
 
-var ElementWithText =
+var ElementWithAppendedText =
 /*#__PURE__*/
 function (_AsyncObject) {
-  _inherits(ElementWithText, _AsyncObject);
+  _inherits(ElementWithAppendedText, _AsyncObject);
 
-  function ElementWithText(elm, text) {
-    _classCallCheck(this, ElementWithText);
+  function ElementWithAppendedText(elm, text) {
+    _classCallCheck(this, ElementWithAppendedText);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ElementWithText).call(this, elm, text));
+    return _possibleConstructorReturn(this, _getPrototypeOf(ElementWithAppendedText).call(this, elm, text));
   }
 
-  _createClass(ElementWithText, [{
+  _createClass(ElementWithAppendedText, [{
     key: "definedSyncCall",
     value: function definedSyncCall() {
       return function (elm, text) {
@@ -42,7 +42,7 @@ function (_AsyncObject) {
     }
   }]);
 
-  return ElementWithText;
+  return ElementWithAppendedText;
 }(AsyncObject);
 
-module.exports = ElementWithText;
+module.exports = ElementWithAppendedText;
