@@ -1,6 +1,6 @@
 {
   "name": "@page-libs/dom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of async objects for creating DOM elements in Page framework.",
   "main": "index.js",
   "scripts": {
