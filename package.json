@@ -1,7 +1,7 @@
 {
   "name": "@page-libs/dom",
   "version": "1.0.0",
-  "description": "Set of async objects for manipulating DOM (creating, getting by id and so on) in Page framework.",
+  "description": "Set of async objects for creating DOM elements in Page framework.",
   "main": "index.js",
   "scripts": {
     "build": "grunt",

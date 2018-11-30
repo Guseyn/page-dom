@@ -2,7 +2,7 @@
 
 const { AsyncObject } = require('@page-libs/cutie');
 
-class ElementWithText extends AsyncObject {
+class ElementWithAppendedText extends AsyncObject {
 
   constructor(elm, text) {
     super(elm, text);
@@ -17,4 +17,4 @@ class ElementWithText extends AsyncObject {
 
 }
 
-module.exports = ElementWithText;
+module.exports = ElementWithAppendedText;

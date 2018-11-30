@@ -3,11 +3,11 @@
 const { ObjWithNoFuncs } = require('./../mock');
 const { AsyncObject } = require('@cuties/cutie');
 const { DeepEqualAssertion } = require('@cuties/assert');
-const { CreatedElement, ElementWithText } = require('./../src/index');
+const { CreatedElement, ElementWithAppendedText } = require('./../src/index');
 
 new DeepEqualAssertion(
   new ObjWithNoFuncs(
-    new ElementWithText(
+    new ElementWithAppendedText(
       new CreatedElement(
         'tag', 'attr1="value1" attr2=\'value2\' attr3="value3"', "text"
       ), 'text'
