@@ -1,16 +1,15 @@
 'use strict'
 
-const { ObjWithNoFuncs } = require('./../mock');
-const { AsyncObject } = require('@cuties/cutie');
-const { DeepEqualAssertion } = require('@cuties/assert');
-const { CreatedElement, ElementWithAppendedChildren, h1, div, a, img, p } = require('./../src/index');
+const { ObjWithNoFuncs } = require('./../mock')
+const { DeepStrictEqualAssertion } = require('@cuties/assert')
+const { ElementWithAppendedChildren, h1, div, a, img, p } = require('./../src/index')
 
-new DeepEqualAssertion(
+new DeepStrictEqualAssertion(
   new ObjWithNoFuncs(
     new ElementWithAppendedChildren(
       document.createElement('div'),
       div('class="div" id="div1"')(
-        h1()(), 
+        h1()(),
         a('href="guseyn.com"')(),
         div('class="div" id="div2"')(
           img('src="image.png"')(),
@@ -26,8 +25,8 @@ new DeepEqualAssertion(
       {
         tagName: 'div',
         attributes: [
-          {name: 'class', value: 'div'},
-          {name: 'id', value: 'div1'}
+          { name: 'class', value: 'div' },
+          { name: 'id', value: 'div1' }
         ],
         children: [
           {
@@ -38,21 +37,21 @@ new DeepEqualAssertion(
           {
             tagName: 'a',
             attributes: [
-              {name: 'href', value: 'guseyn.com'}
+              { name: 'href', value: 'guseyn.com' }
             ],
             children: []
           },
           {
             tagName: 'div',
             attributes: [
-              {name: 'class', value: 'div'},
-              {name: 'id', value: 'div2'}
+              { name: 'class', value: 'div' },
+              { name: 'id', value: 'div2' }
             ],
             children: [
               {
                 tagName: 'img',
                 attributes: [
-                  {name: 'src', value: 'image.png'}
+                  { name: 'src', value: 'image.png' }
                 ],
                 children: []
               },
@@ -60,7 +59,7 @@ new DeepEqualAssertion(
                 tagName: 'p',
                 attributes: [],
                 children: [
-                  {text: 'text'}
+                  { text: 'text' }
                 ]
               }
             ]
@@ -69,4 +68,4 @@ new DeepEqualAssertion(
       }
     ]
   }
-).call();
+).call()

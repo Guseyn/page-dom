@@ -33,8 +33,8 @@ function (_AsyncObject) {
   }
 
   _createClass(ElementWithAttributes, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (elm, attrStr) {
         attrStr.split(' ').forEach(function (attrPair) {
           var nameAndValue = attrPair.split('=');

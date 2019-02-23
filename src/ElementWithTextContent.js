@@ -1,21 +1,19 @@
 
 'use strict'
 
-const { AsyncObject } = require('@page-libs/cutie');
+const { AsyncObject } = require('@page-libs/cutie')
 
 class ElementWithTextContent extends AsyncObject {
-
-  constructor(elm, html) {
-    super(elm, html);
+  constructor (elm, html) {
+    super(elm, html)
   }
 
-  definedSyncCall() {
+  syncCall () {
     return (elm, html) => {
-      elm.textContent = html;
-      return elm;
+      elm.textContent = html
+      return elm
     }
   }
-
 }
 
-module.exports = ElementWithTextContent;
+module.exports = ElementWithTextContent

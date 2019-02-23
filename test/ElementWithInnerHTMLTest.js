@@ -1,11 +1,10 @@
 'use strict'
 
-const { ObjWithNoFuncs } = require('./../mock');
-const { AsyncObject } = require('@cuties/cutie');
-const { DeepEqualAssertion } = require('@cuties/assert');
-const { CreatedElement, ElementWithInnerHTML } = require('./../src/index');
+const { ObjWithNoFuncs } = require('./../mock')
+const { DeepStrictEqualAssertion } = require('@cuties/assert')
+const { CreatedElement, ElementWithInnerHTML } = require('./../src/index')
 
-new DeepEqualAssertion(
+new DeepStrictEqualAssertion(
   new ObjWithNoFuncs(
     new ElementWithInnerHTML(
       new CreatedElement(
@@ -16,11 +15,11 @@ new DeepEqualAssertion(
   {
     tagName: 'tag',
     attributes: [
-      {name: 'attr1', value: 'value1'},
-      {name: 'attr2', value: 'value2'},
-      {name: 'attr3', value: 'value3'}
+      { name: 'attr1', value: 'value1' },
+      { name: 'attr2', value: 'value2' },
+      { name: 'attr3', value: 'value3' }
     ],
     children: [],
     innerHTML: '<html/>'
   }
-).call();
+).call()

@@ -33,8 +33,8 @@ function (_AsyncObject) {
   }
 
   _createClass(ElementWithAppendedText, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (elm, text) {
         elm.appendChild(document.createTextNode(text));
         return elm;
