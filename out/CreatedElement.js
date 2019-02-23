@@ -33,8 +33,8 @@ function (_AsyncObject) {
   }
 
   _createClass(CreatedElement, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (tagName, attrStr, text) {
         var elm = document.createElement(tagName);
 

@@ -33,8 +33,8 @@ function (_AsyncObject) {
   }
 
   _createClass(ElementWithTextContent, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (elm, html) {
         elm.textContent = html;
         return elm;

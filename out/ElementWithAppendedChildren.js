@@ -39,8 +39,8 @@ function (_AsyncObject) {
   }
 
   _createClass(ElementWithAppendedChildren, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (elm) {
         for (var _len2 = arguments.length, children = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
           children[_key2 - 1] = arguments[_key2];

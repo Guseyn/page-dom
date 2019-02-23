@@ -33,8 +33,8 @@ function (_AsyncObject) {
   }
 
   _createClass(ElementWithInnerHTML, [{
-    key: "definedSyncCall",
-    value: function definedSyncCall() {
+    key: "syncCall",
+    value: function syncCall() {
       return function (elm, html) {
         elm.innerHTML = html;
         return elm;

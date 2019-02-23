@@ -1,23 +1,26 @@
 # page-dom
+
+[![NPM Version](https://img.shields.io/npm/v/@page-libs/dom.svg)](https://npmjs.org/package/@page-libs/dom)
+[![Build Status](https://travis-ci.org/Guseyn/page-dom.svg?branch=master)](https://travis-ci.org/Guseyn/page-dom)
+[![codecov](https://codecov.io/gh/Guseyn/page-dom/branch/master/graph/badge.svg)](https://codecov.io/gh/Guseyn/page-dom)
+
 Set of async objects for creating DOM elements in [Page](https://github.com/Guseyn/page) framework.  It's based on the [Async Tree Pattern](https://github.com/Guseyn/async-tree-patern/blob/master/Async_Tree_Patern.pdf).
 
-[![NPM Version][npm-image]][npm-url]
-
-## install
+## Install
 
 `npm install @page-libs/dom`
 
-## build
+## Run test
+
+`npm test`
+
+## Run build
 
 `npm run build`
 
 Package is already built. So, for using in Page you just need to install it.
 
-## test
-
-`npm test`
-
-## usage
+## Usage
 
 ```js
 const { 
@@ -113,6 +116,3 @@ new ElementWithAppendedChildren(
 ).call();
 
 ```
-
-[npm-image]: https://img.shields.io/npm/v/@page-libs/dom.svg
-[npm-url]: https://npmjs.org/package/@page-libs/dom
