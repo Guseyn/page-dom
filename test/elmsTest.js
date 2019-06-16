@@ -22,50 +22,94 @@ new DeepStrictEqualAssertion(
     tagName: 'div',
     attributes: [],
     children: [
-      {
-        tagName: 'div',
+      { tagName: 'div',
         attributes: [
           { name: 'class', value: 'div' },
-          { name: 'id', value: 'div1' }
-        ],
+          { name: 'id', value: 'div1' } ],
         children: [
-          {
-            tagName: 'h1',
+          { tagName: 'h1',
             attributes: [],
-            children: []
-          },
-          {
-            tagName: 'a',
-            attributes: [
-              { name: 'href', value: 'guseyn.com' }
-            ],
-            children: []
-          },
-          {
-            tagName: 'div',
+            children: [],
+            parentNode: {},
+            firstChild: undefined },
+          { tagName: 'a',
+            attributes: [ { name: 'href', value: 'guseyn.com' } ],
+            children: [],
+            parentNode: {},
+            firstChild: undefined },
+          { tagName: 'div',
             attributes: [
               { name: 'class', value: 'div' },
-              { name: 'id', value: 'div2' }
-            ],
+              { name: 'id', value: 'div2' } ],
             children: [
-              {
-                tagName: 'img',
-                attributes: [
-                  { name: 'src', value: 'image.png' }
-                ],
-                children: []
-              },
-              {
-                tagName: 'p',
+              { tagName: 'img',
+                attributes: [ { name: 'src', value: 'image.png' } ],
+                children: [],
+                parentNode: {},
+                firstChild: undefined },
+              { tagName: 'p',
                 attributes: [],
-                children: [
-                  { text: 'text' }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+                children: [ { text: 'text' } ],
+                parentNode: {},
+                firstChild: { text: 'text' } } ],
+            parentNode: {},
+            firstChild: {
+              tagName: 'img',
+              attributes: [ { name: 'src', value: 'image.png' } ],
+              children: [],
+              parentNode: {},
+              firstChild: undefined } } ],
+        parentNode: {},
+        firstChild: {
+          tagName: 'h1',
+          attributes: [],
+          children: [],
+          parentNode: {},
+          firstChild: undefined } } ],
+    parentNode: {},
+    firstChild: {
+      tagName: 'div',
+      attributes:
+       [ { name: 'class', value: 'div' },
+         { name: 'id', value: 'div1' } ],
+      children: [
+        { tagName: 'h1',
+          attributes: [],
+          children: [],
+          parentNode: {},
+          firstChild: undefined },
+        { tagName: 'a',
+          attributes: [ { name: 'href', value: 'guseyn.com' } ],
+          children: [],
+          parentNode: {},
+          firstChild: undefined },
+        { tagName: 'div',
+          attributes: [
+            { name: 'class', value: 'div' },
+            { name: 'id', value: 'div2' } ],
+          children: [
+            { tagName: 'img',
+              attributes: [ { name: 'src', value: 'image.png' } ],
+              children: [],
+              parentNode: {},
+              firstChild: undefined },
+            { tagName: 'p',
+              attributes: [],
+              children: [ { text: 'text' } ],
+              parentNode: {},
+              firstChild: { text: 'text' } } ],
+          parentNode: {},
+          firstChild: {
+            tagName: 'img',
+            attributes: [ { name: 'src', value: 'image.png' } ],
+            children: [],
+            parentNode: {},
+            firstChild: undefined } } ],
+      parentNode: {},
+      firstChild:
+       { tagName: 'h1',
+         attributes: [],
+         children: [],
+         parentNode: {},
+         firstChild: undefined } } }
 ).call()

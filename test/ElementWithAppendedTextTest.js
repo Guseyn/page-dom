@@ -22,6 +22,8 @@ new DeepStrictEqualAssertion(
     children: [
       { text: 'text' },
       { text: 'text' }
-    ]
+    ],
+    firstChild: { text: 'text' },
+    parentNode: {}
   }
 ).call()

@@ -26,59 +26,46 @@ new DeepStrictEqualAssertion(
       )
     )
   ),
-  {
-    tagName: 'tag',
-    attributes: [
-      { name: 'attr1', value: 'value1' },
-      { name: 'attr2', value: 'value2' },
-      { name: 'attr3', value: 'value3' }
-    ],
-    children: [
-      { text: 'text' },
-      {
-        tagName: 'tag',
-        attributes: [
-          { name: 'attr1', value: 'value1' },
-          { name: 'attr2', value: 'value2' },
-          { name: 'attr3', value: 'value3' }
-        ],
-        children: [
-          { text: 'text' }
-        ]
-      },
-      {
-        tagName: 'tag',
-        attributes: [
-          { name: 'attr1', value: 'value1' },
-          { name: 'attr2', value: 'value2' },
-          { name: 'attr3', value: 'value3' }
-        ],
-        children: [
-          { text: 'text' },
-          {
-            tagName: 'tag',
-            attributes: [
-              { name: 'attr1', value: 'value1' },
-              { name: 'attr2', value: 'value2' },
-              { name: 'attr3', value: 'value3' }
-            ],
-            children: [
-              { text: 'text' }
-            ]
-          }
-        ]
-      },
-      {
-        tagName: 'tag',
-        attributes: [
-          { name: 'attr1', value: 'value1' },
-          { name: 'attr2', value: 'value2' },
-          { name: 'attr3', value: 'value3' }
-        ],
-        children: [
-          { text: 'text' }
-        ]
-      }
-    ]
-  }
+  { tagName: 'tag',
+    attributes:
+     [ { name: 'attr1', value: 'value1' },
+       { name: 'attr2', value: 'value2' },
+       { name: 'attr3', value: 'value3' } ],
+    children:
+     [ { text: 'text' },
+       { tagName: 'tag',
+         attributes:
+          [ { name: 'attr1', value: 'value1' },
+            { name: 'attr2', value: 'value2' },
+            { name: 'attr3', value: 'value3' } ],
+         children: [ { text: 'text' } ],
+         parentNode: {},
+         firstChild: { text: 'text' } },
+       { tagName: 'tag',
+         attributes:
+          [ { name: 'attr1', value: 'value1' },
+            { name: 'attr2', value: 'value2' },
+            { name: 'attr3', value: 'value3' } ],
+         children:
+          [ { text: 'text' },
+            { tagName: 'tag',
+              attributes:
+               [ { name: 'attr1', value: 'value1' },
+                 { name: 'attr2', value: 'value2' },
+                 { name: 'attr3', value: 'value3' } ],
+              children: [ { text: 'text' } ],
+              parentNode: {},
+              firstChild: { text: 'text' } } ],
+         parentNode: {},
+         firstChild: { text: 'text' } },
+       { tagName: 'tag',
+         attributes:
+          [ { name: 'attr1', value: 'value1' },
+            { name: 'attr2', value: 'value2' },
+            { name: 'attr3', value: 'value3' } ],
+         children: [ { text: 'text' } ],
+         parentNode: {},
+         firstChild: { text: 'text' } } ],
+    parentNode: {},
+    firstChild: { text: 'text' } }
 ).call()
