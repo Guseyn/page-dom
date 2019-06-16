@@ -20,6 +20,8 @@ new DeepStrictEqualAssertion(
       { name: 'attr3', value: 'value3' }
     ],
     children: [],
-    innerHTML: '<html/>'
+    innerHTML: '<html/>',
+    firstChild: undefined,
+    parentNode: {}
   }
 ).call()

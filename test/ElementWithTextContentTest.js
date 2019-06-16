@@ -20,6 +20,8 @@ new DeepStrictEqualAssertion(
       { name: 'attr3', value: 'value3' }
     ],
     children: [],
-    textContent: 'text'
+    textContent: 'text',
+    firstChild: undefined,
+    parentNode: {}
   }
 ).call()
