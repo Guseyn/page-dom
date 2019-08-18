@@ -29,6 +29,16 @@ global.document = {
         elm.children.push(child)
         elm.firstChild = elm.children[0]
       },
+      append: (...children) => {
+        children.forEach(child => {
+          elm.appendChild(child)
+        })
+      },
+      prepend: (...children) => {
+        children.forEach(child => {
+          elm.appendChild(child)
+        })
+      },
       removeChild: (child) => {
         const shifted = elm.children.shift()
         elm.firstChild = elm.children[0]
