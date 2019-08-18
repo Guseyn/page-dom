@@ -2,17 +2,17 @@
 
 const { AsyncObject } = require('@page-libs/cutie')
 
-class ElementWithAppendedChildren extends AsyncObject {
+class ElementWithPrependedChildren extends AsyncObject {
   constructor (elm, ...children) {
     super(elm, ...children)
   }
 
   syncCall () {
     return (elm, ...children) => {
-      elm.append(...children)
+      elm.prepend(...children)
       return elm
     }
   }
 }
 
-module.exports = ElementWithAppendedChildren
+module.exports = ElementWithPrependedChildren
