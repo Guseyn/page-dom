@@ -21,24 +21,24 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var _require = require('@page-libs/cutie'),
     AsyncObject = _require.AsyncObject;
 
-var ElementWithAppendedChildren =
+var ElementWithPrependedChildren =
 /*#__PURE__*/
 function (_AsyncObject) {
-  _inherits(ElementWithAppendedChildren, _AsyncObject);
+  _inherits(ElementWithPrependedChildren, _AsyncObject);
 
-  function ElementWithAppendedChildren(elm) {
+  function ElementWithPrependedChildren(elm) {
     var _getPrototypeOf2;
 
-    _classCallCheck(this, ElementWithAppendedChildren);
+    _classCallCheck(this, ElementWithPrependedChildren);
 
     for (var _len = arguments.length, children = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       children[_key - 1] = arguments[_key];
     }
 
-    return _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ElementWithAppendedChildren)).call.apply(_getPrototypeOf2, [this, elm].concat(children)));
+    return _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ElementWithPrependedChildren)).call.apply(_getPrototypeOf2, [this, elm].concat(children)));
   }
 
-  _createClass(ElementWithAppendedChildren, [{
+  _createClass(ElementWithPrependedChildren, [{
     key: "syncCall",
     value: function syncCall() {
       return function (elm) {
@@ -46,13 +46,13 @@ function (_AsyncObject) {
           children[_key2 - 1] = arguments[_key2];
         }
 
-        elm.append.apply(elm, children);
+        elm.prepend.apply(elm, children);
         return elm;
       };
     }
   }]);
 
-  return ElementWithAppendedChildren;
+  return ElementWithPrependedChildren;
 }(AsyncObject);
 
-module.exports = ElementWithAppendedChildren;
+module.exports = ElementWithPrependedChildren;
