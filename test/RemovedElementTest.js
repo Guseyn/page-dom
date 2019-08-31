@@ -2,12 +2,14 @@
 
 const { ObjWithNoFuncs } = require('./../mock')
 const { DeepStrictEqualAssertion } = require('@cuties/assert')
-const { CreatedElement } = require('./../src/index')
+const { CreatedElement, RemovedElement } = require('./../src/index')
 
 new DeepStrictEqualAssertion(
   new ObjWithNoFuncs(
-    new CreatedElement(
-      'tag', 'attr1="value1" attr2=\'value2\' attr3="value3"', 'text'
+    new RemovedElement(
+      new CreatedElement(
+        'tag', 'attr1="value1" attr2=\'value2\' attr3="value3"'
+      ), 'text'
     )
   ),
   {
@@ -18,10 +20,8 @@ new DeepStrictEqualAssertion(
       { name: 'attr2', value: 'value2' },
       { name: 'attr3', value: 'value3' }
     ],
-    children: [
-      { text: 'text' }
-    ],
-    firstChild: { text: 'text' },
+    children: [],
+    firstChild: undefined,
     parentNode: {}
   }
 ).call()

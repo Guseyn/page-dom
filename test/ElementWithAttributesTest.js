@@ -14,6 +14,7 @@ new DeepStrictEqualAssertion(
   ),
   {
     tagName: 'tag',
+    innerHTML: '',
     attributes: [
       { name: 'attr1', value: 'value111111' },
       { name: 'attr2', value: 'value2' },

@@ -9,6 +9,7 @@ global.document = {
       tagName: tagName,
       attributes: [],
       children: [],
+      innerHTML: '',
       setAttribute: (name, value) => {
         let index = elm.attributes.findIndex(
           (elm) => {
@@ -47,6 +48,9 @@ global.document = {
       parentNode: {
         replaceChild: (newChild, oldChild) => {
           return newChild
+        },
+        removeChild: (child) => {
+          return child
         }
       }
     }
