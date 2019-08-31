@@ -27,7 +27,7 @@ const {
 
   // Async objects from the list below
 
-} = require('@page-libs/dom');
+} = require('@page-libs/dom')
 
 ```
 
@@ -42,10 +42,33 @@ new CreatedElement(
 
 ```
 
+## `ElementWithAdditionalHTML(elm, html)`
+
+```js
+new ElementWithAdditionalHTML(
+  new CreatedElement(
+    'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"'
+  ), '<div>content</div>'
+).call()
+
+```
+
 ## `ElementWithAppendedChildren(elm, ...children)`
 
 ```js
 new ElementWithAppendedChildren(
+  document.getElementById('elm-id'),
+  new CreatedElement(
+    'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"', "text"
+  )
+).call()
+
+```
+
+## `ElementWithPrependedChildren(elm, ...children)`
+
+```js
+new ElementWithPrependedChildren(
   document.getElementById('elm-id'),
   new CreatedElement(
     'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"', "text"
@@ -72,7 +95,7 @@ new ElementWithAttributes(
   new CreatedElement(
     'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"', "text"
   ), 'name="div"'
-).call();
+).call()
 
 ```
 
@@ -83,7 +106,7 @@ new ElementWithInnerHTML(
   new CreatedElement(
     'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"'
   ), '<div>content</div>'
-).call();
+).call()
 
 ```
 
@@ -94,7 +117,25 @@ new ElementWithTextContent(
   new CreatedElement(
     'div', 'class="div" id="div1" style="color: deepskyblue; border: 1px solid solid;"'
   ), 'content'
-).call();
+).call()
+
+```
+
+## `RemovedElement(elm)`
+
+```js
+new RemovedElement(
+  someElement
+).call()
+
+```
+
+## `ReplacedElement(newElm, oldElm)`
+
+```js
+new ReplacedElement(
+  newElm, oldElm
+).call()
 
 ```
 
@@ -113,6 +154,6 @@ new ElementWithAppendedChildren(
       p('', 'text')()
     )
   )
-).call();
+).call()
 
 ```

@@ -31,6 +31,7 @@ new DeepStrictEqualAssertion(
   { elms:
    [ { text: 'text' },
      { tagName: 'tag',
+       innerHTML: '',
        attributes:
         [ { name: 'attr1', value: 'value1' },
           { name: 'attr2', value: 'value2' },
@@ -39,6 +40,7 @@ new DeepStrictEqualAssertion(
        parentNode: {},
        firstChild: { text: 'text' } },
      { tagName: 'tag',
+       innerHTML: '',
        attributes:
         [ { name: 'attr1', value: 'value1' },
           { name: 'attr2', value: 'value2' },
@@ -46,6 +48,7 @@ new DeepStrictEqualAssertion(
        children:
         [ { text: 'text' },
           { tagName: 'tag',
+            innerHTML: '',
             attributes:
              [ { name: 'attr1', value: 'value1' },
                { name: 'attr2', value: 'value2' },
@@ -56,6 +59,7 @@ new DeepStrictEqualAssertion(
        parentNode: {},
        firstChild: { text: 'text' } },
      { tagName: 'tag',
+       innerHTML: '',
        attributes:
         [ { name: 'attr1', value: 'value1' },
           { name: 'attr2', value: 'value2' },
